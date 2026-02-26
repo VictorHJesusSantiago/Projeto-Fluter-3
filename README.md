@@ -1,138 +1,292 @@
-<div align="center"><h1>📱 Projeto Flutter 3 - Contador Stateful 🔢 </h1><p><strong>Um projeto de demonstração fundamental que explora os conceitos centrais de <code>StatefulWidget</code> e gestão de estado com <code>setState()</code> no Flutter.</strong></p><p><img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter"><img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart"><a href="#"><img src="https://img.shields.io/badge/Status-Completo_(Demo)-brightgreen?style=for-the-badge" alt="Status do Projeto"></a><a href="#"><img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-blue?style=for-the-badge" alt="Licença"></a><a href="#">
-<img src="https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge" alt="PRs Welcome"></a>
-  
------------------------------------------------------------------------------------------------------------------------------
-<details><summary><strong>📚 Tabela de Conteúdos</strong></summary><ol><li><a href="#-sobre-o-projeto">
+<div align="center">
 
+<img src="https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png" alt="Flutter Logo" width="110" />
 
- 📖 Sobre o Projeto</a></li><li><a href="#-demonstração-em-vídeo">🎥 Demonstração em Vídeo</a></li><li><a href="#-conceitos-principais">✨ Conceitos Principais</a></li><li><a href="#-pilha-de-tecnologias-tech-stack">🛠️ Pilha de Tecnologias (Tech Stack)</a></li><li><a href="#-o-coração-do-estado-análise-do-código">🔑 O Coração do Estado (Análise do Código)</a></li><li><a href="#-começando-getting-started">🚀 Começando (Getting Started)</a></li><li><a href="#-estrutura-de-ficheiros">📂 Estrutura de Ficheiros</a></li><li><a href="#-como-contribuir">🤝 Como Contribuir</a></li><li><a href="#-autor">👨‍💻 Autor</a></li><li><a href="#-licença">📄 Licença</a></li></ol></details>
+# 📱 Projeto Flutter 3 — Contador Stateful
 
- ----------------------------------------------------------------------------------------------------------------------------
- 📖 Sobre o Projeto
- 
-Este repositório contém o aplicativo "Contador". Embora seja o ponto de partida padrão (flutter create), ele foi concebido para ser uma lição fundamental sobre a diferença entre Widgets Estáticos e Widgets com Estado.O objetivo é demonstrar como a UI (Interface do Utilizador) pode reagir e ser reconstruída em resposta a uma interação do utilizador, alterando um dado interno (o estado).
+**Um projeto de demonstração fundamental que explora os conceitos centrais de**
+**`StatefulWidget` e gestão de estado com `setState()` no Flutter.**
 
------------------------------------------------------------------------------------------------------------------------------
-✨ Conceitos Principais
+<br>
 
-Este projeto simples é uma demonstração poderosa de 
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![Material Design](https://img.shields.io/badge/Material%20Design-757575?style=for-the-badge&logo=materialdesign&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completo_(Demo)-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/Licença-MIT-blue?style=for-the-badge)
+![PRs](https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge)
 
-1. StatelessWidget: (MyApp) Widgets que são imutáveis; as suas propriedades não podem mudar. São perfeitos para a estrutura estática da aplicação.
+</div>
 
-2. StatefulWidget: (MyHomePage) Widgets que mantêm um estado que pode mudar ao longo do tempo (ex: o número do contador).
+---
 
-3. State Object: O objeto (_MyHomePageState) que armazena a informação mutável (a variável _counter).
+## 📚 Tabela de Conteúdos
 
-4. setState(): A função vital que notifica o Flutter que o estado mudou. Esta chamada aciona o método build para ser executado novamente, "redesenhando" a UI com os novos dados.
+> Navegue rapidamente pelas seções do projeto.
 
-5. Árvore de Widgets: A estrutura hierárquica (Scaffold -> AppBar -> Center -> Column -> Text) que define o layout.
+| # | Seção |
+|:-:|:------|
+| 1 | [📖 Sobre o Projeto](#-sobre-o-projeto) |
+| 2 | [✨ Conceitos Principais](#-conceitos-principais) |
+| 3 | [🛠️ Pilha de Tecnologias](#️-pilha-de-tecnologias) |
+| 4 | [🔑 O Coração do Estado](#-o-coração-do-estado--análise-do-código) |
+| 5 | [🚀 Começando (Getting Started)](#-começando-getting-started) |
+| 6 | [📂 Estrutura de Arquivos](#-estrutura-de-arquivos) |
+| 7 | [🤝 Como Contribuir](#-como-contribuir) |
+| 8 | [👨‍💻 Autor](#-autor) |
+| 9 | [📄 Licença](#-licença) |
 
-6. Interatividade: Capturar eventos de utilizador (onPressed) num FloatingActionButton para acionar a lógica de negócio.
+---
 
-----------------------------------------------------------------------------------------------------------------------------
-🛠️ Pilha de Tecnologias (Tech Stack)
+## 📖 Sobre o Projeto
 
-A tecnologia utilizada neste projeto é minimalista, mas fundamental:
+> Este repositório contém o aplicativo **"Contador"** — o ponto de partida padrão do Flutter, reimaginado como uma **lição fundamental** sobre a diferença entre Widgets Estáticos e Widgets com Estado.
 
-  Framework (Flutter): UI Toolkit da Google para apps nativas multiplataforma.
+O objetivo central é demonstrar como a **UI (Interface do Usuário)** pode reagir e ser reconstruída dinamicamente em resposta a uma interação do usuário, alterando um dado interno — o **estado** da aplicação.
 
-  Linguagem (Dart): A linguagem de programação moderna e otimizada para UI.
-  
-  Gestão de Estado (setState()): O método nativo do Flutter para gerir o estado local do widget.
-  
-  Design System (Material Design): Biblioteca de componentes visuais (Scaffold, AppBar, FAB).
-  
-  Build (Flutter SDK): Ferramentas de compilação para Android, iOS, Web, etc.
-  
---------------------------------------------------------------------------------------------------------------------------- 
-🔑 O Coração do Estado (Análise do Código)
+Simples na aparência, poderoso nos conceitos que ensina.
 
-Toda a lógica interativa do aplicativo reside no ficheiro lib/main.dart. O fluxo de dados é simples e poderoso:
+---
 
------------------------------------------------------------------------------------------------------------------------------
-🚀 Começando (Getting Started)
+## ✨ Conceitos Principais
 
-  Para executar este projeto localmente, siga estes passos.
-  
-  1. Pré-requisitos:
+> Este projeto demonstra os pilares da arquitetura reativa do Flutter de forma clara e progressiva.
 
-     Ter o Flutter SDK (v3.x.x ou superior) instalado.
+| Conceito | Classe / Método | Descrição |
+|:---------|:---------------:|:----------|
+| 🧱 **StatelessWidget** | `MyApp` | Widget imutável — suas propriedades não mudam após a criação. Ideal para estrutura estática da aplicação. |
+| 🔄 **StatefulWidget** | `MyHomePage` | Widget que mantém um **estado mutável** ao longo do tempo (ex: o número do contador). |
+| 📦 **State Object** | `_MyHomePageState` | Objeto que armazena a informação mutável — a variável `_counter`. |
+| ⚡ **setState()** | `setState()` | Função vital que **notifica o Flutter** sobre mudanças de estado, acionando o método `build()` para redesenhar a UI. |
+| 🌳 **Árvore de Widgets** | `Scaffold → AppBar → Center → Column → Text` | Estrutura hierárquica que define o layout visual da tela. |
+| 👆 **Interatividade** | `onPressed` | Captura eventos do usuário no `FloatingActionButton` para acionar a lógica de negócio. |
 
-     Um editor de código (como VS Code ou Android Studio).
+---
 
-  2. Guia de Instalação
-     Clone o repositório:
+## 🛠️ Pilha de Tecnologias
 
-         git clone https://github.com/victorhjsantiago/projeto-flutter-1.git
+> Tecnologias minimalistas, mas fundamentais — escolhidas para manter o foco total nos conceitos de estado.
 
-         cd projeto-flutter-1
+| Tecnologia | Função no Projeto |
+|:-----------|:------------------|
+| **Flutter 3** | UI Toolkit da Google para construção de apps nativas multiplataforma (Android, iOS, Web, Desktop). |
+| **Dart** | Linguagem de programação moderna, otimizada para desenvolvimento de UI reativa. |
+| **setState()** | Método nativo do Flutter para gerenciamento de **estado local** do widget. |
+| **Material Design** | Biblioteca de componentes visuais: `Scaffold`, `AppBar`, `FloatingActionButton`. |
+| **Flutter SDK** | Ferramentas de compilação para Android, iOS, Web, Linux, macOS e Windows. |
 
-  3. Instale as dependências:(Este projeto não tem dependências externas, mas este é o comando padrão.)
+---
 
-          flutter pub get
+## 🔑 O Coração do Estado — Análise do Código
 
-  4. Execute a Aplicação: Certifique-se de que tem um dispositivo (emulador ou físico) em execução.
-  
-          flutter run
+> Toda a lógica interativa reside em `lib/main.dart`. O fluxo de dados é simples, direto e poderoso.
 
-      (Para executar na web, utilize: flutter run -d chrome)
+```dart
+// 1. O StatefulWidget declara que possui estado mutável
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+  final String title;
 
-----------------------------------------------------------------------------------------------------------------------------
-📂 Estrutura de Ficheiros
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
 
+// 2. O State Object armazena e gerencia o dado mutável
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0; // ← O ESTADO: o dado que pode mudar
+
+  void _incrementCounter() {
+    setState(() {
+      // 3. setState() notifica o Flutter e dispara o rebuild da UI
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // 4. build() é chamado novamente, exibindo o novo valor de _counter
+    return Scaffold(
+      appBar: AppBar(title: Text(widget.title)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text('Você pressionou o botão este número de vezes:'),
+            Text(
+              '$_counter', // ← O estado é refletido aqui
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter, // ← Evento do usuário
+        tooltip: 'Incrementar',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+```
+
+**Fluxo resumido:**
+
+```
+👆 Usuário pressiona o botão
+        ↓
+⚡ _incrementCounter() é chamado
+        ↓
+📦 setState() incrementa _counter
+        ↓
+🔄 Flutter chama build() novamente
+        ↓
+🖥️ UI é redesenhada com o novo valor
+```
+
+---
+
+## 🚀 Começando (Getting Started)
+
+### 📋 Pré-requisitos
+
+| Requisito | Detalhe |
+|:----------|:--------|
+| **Flutter SDK** | Versão **3.x.x ou superior** instalada e configurada no `PATH`. |
+| **Editor de Código** | Recomenda-se **VS Code** (com extensão Flutter) ou **Android Studio**. |
+| **Dispositivo/Emulador** | Android, iOS, Chrome (web) ou Desktop configurado e em execução. |
+
+---
+
+### 🔧 Passo a Passo
+
+**1. Clone o repositório:**
+
+```bash
+git clone https://github.com/VictorHJesusSantiago/projeto-flutter-1.git
+cd projeto-flutter-1
+```
+
+**2. Instale as dependências:**
+
+```bash
+# Este projeto não possui dependências externas,
+# mas este é o comando padrão do Flutter:
+flutter pub get
+```
+
+**3. Verifique o ambiente Flutter:**
+
+```bash
+flutter doctor
+```
+
+**4. Execute a aplicação:**
+
+```bash
+# Em dispositivo padrão (emulador ou físico)
+flutter run
+
+# Especificamente no Chrome (Web)
+flutter run -d chrome
+
+# Listar todos os dispositivos disponíveis
+flutter devices
+```
+
+---
+
+### 🛰️ Plataformas Suportadas
+
+| Plataforma | Comando | Status |
+|:-----------|:--------|:------:|
+| 🤖 **Android** | `flutter run -d android` | ✅ Suportado |
+| 🍎 **iOS** | `flutter run -d ios` | ✅ Suportado |
+| 🌐 **Web (Chrome)** | `flutter run -d chrome` | ✅ Suportado |
+| 🪟 **Windows** | `flutter run -d windows` | ✅ Suportado |
+| 🐧 **Linux** | `flutter run -d linux` | ✅ Suportado |
+| 🍏 **macOS** | `flutter run -d macos` | ✅ Suportado |
+
+---
+
+## 📂 Estrutura de Arquivos
+
+```plaintext
 projeto-flutter-1/
+│
+├── 📁 android/                    # ⚙️  Configuração e código nativo Android
+├── 📁 ios/                        # ⚙️  Configuração e código nativo iOS
+├── 📁 linux/                      # ⚙️  Configuração nativa Linux
+├── 📁 macos/                      # ⚙️  Configuração nativa macOS
+├── 📁 windows/                    # ⚙️  Configuração nativa Windows
+├── 📁 web/                        # ⚙️  Configuração nativa Web
+│
+├── 📁 lib/
+│   └── 📄 main.dart               # ✨ PONTO DE ENTRADA — Toda a lógica do app
+│
+├── 📁 test/
+│   └── 📄 widget_test.dart        # 🧪 Teste de widget padrão do Flutter
+│
+├── 📄 pubspec.yaml                # 📦 Metadados, dependências e assets do projeto
+├── 📄 analysis_options.yaml       # 🔍 Regras de linter do Dart
+└── 📄 .gitignore                  # 🚫 Arquivos ignorados pelo Git
+```
 
-├── android/            # Configuração e código nativo do Android
+---
 
-├── ios/                # Configuração e código nativo do iOS
+## 🤝 Como Contribuir
 
-├── lib/
+> Contribuições tornam a comunidade open-source um lugar incrível para aprender e crescer. Qualquer melhoria é muito apreciada!
 
-│   └── main.dart       # <--- ✨ O PONTO DE ENTRADA E O CORAÇÃO DA APP ✨
+| Passo | Ação | Comando |
+|:-----:|:-----|:--------|
+| 1️⃣ | **Fork** | Crie um fork do repositório para a sua conta. |
+| 2️⃣ | **Branch** | Crie sua feature branch. | `git checkout -b feature/NovaFeature` |
+| 3️⃣ | **Commit** | Salve suas alterações com mensagem clara. | `git commit -m 'feat: Adiciona NovaFeature'` |
+| 4️⃣ | **Push** | Envie a branch para o repositório remoto. | `git push origin feature/NovaFeature` |
+| 5️⃣ | **Pull Request** | Abra um PR detalhando as mudanças realizadas. | — |
 
-├── linux/              # Configuração nativa do Linux
+<div align="center">
 
-├── macos/              # Configuração nativa do macOS
+<br>
 
-├── test/
+**Se este projeto foi útil para os seus estudos, deixe uma estrela ⭐️ no repositório!**
 
-│   └── widget_test.dart # Teste de widget padrão
+</div>
 
-├── web/                # Configuração nativa da Web
+---
 
-├── .gitignore
+## 👨‍💻 Autor
 
-├── analysis_options.yaml # Regras de Linter do Dart
+<div align="center">
 
-└── pubspec.yaml        # Metadados e dependências do projeto
+<br>
 
-----------------------------------------------------------------------------------------------------------------------------
-🤝 Como Contribuir
+**Victor H. J. Santiago**
 
-  Contribuições são o que tornam a comunidade open-source um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que fizer será imensamente apreciada. 
-  
-  Se tiver uma sugestão para melhorar este projeto (mesmo sendo um demo!), por favor, faça um fork do repositório e crie um pull request.
-  
-  1. Faça um Fork do Projeto
-  
-  2. Crie a sua Feature Branch (git checkout -b feature/NovaFeatureIncrivel)
-  
-  3. Faça Commit das suas mudanças (git commit -m 'Adiciona NovaFeatureIncrivel')
-  
-  4. Faça Push para a Branch (git push origin feature/NovaFeatureIncrivel)
-  
-  5. Abra um Pull Request
+<br>
 
-  Não se esqueça de dar uma estrela ⭐️ ao projeto!
-  
------------------------------------------------------------------------------------------------------------------------------  
-  👨‍💻 Autor
-  <div align="center"><strong>Victor H. J. Santiago</strong>
-    
-  <a href="https://github.com/victorhjsantiago"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a><a href="URL_DO_SEU_LINKEDIN_AQUI"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VictorHJesusSantiago)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-henrique-de-jesus-santiago/)
 
------------------------------------------------------------------------------------------------------------------------------
-📄 Licença
+</div>
 
-Distribuído sob a Licença MIT. Veja LICENSE para mais informações.
+---
 
+## 📄 Licença
+
+<div align="center">
+
+Este projeto está distribuído sob a **Licença MIT**.
+Consulte o arquivo [`LICENSE`](./LICENSE) no repositório para mais informações.
+
+![License](https://img.shields.io/badge/Licença-MIT-blue?style=for-the-badge)
+
+</div>
+
+---
+
+<div align="center">
+
+*Feito com 💙 e Flutter por **Victor H. J. Santiago***
+
+</div>
